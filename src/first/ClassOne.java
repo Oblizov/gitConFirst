@@ -12,7 +12,7 @@ public class ClassOne {
         int one = in.nextInt();
         int two = in.nextInt();
 
-        System.out.println(numberPlus(one, two));
+        /*System.out.println(numberPlus(one, two));*/
     }
 
     //сложение функций
