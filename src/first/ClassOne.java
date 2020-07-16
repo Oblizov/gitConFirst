@@ -6,13 +6,14 @@ import java.util.Scanner;
 
 public class ClassOne {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception{
 
         Scanner in = new Scanner(System.in);
         int one = in.nextInt();
         int two = in.nextInt();
 
-        /*System.out.println(numberPlus(one, two));*/
+        System.out.println(numberPlus(one, two));
+        System.out.println(compareNumbers(one, two));
     }
 
     //сложение функций
