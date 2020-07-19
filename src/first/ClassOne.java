@@ -12,7 +12,6 @@ public class ClassOne {
         int one = in.nextInt();
         int two = in.nextInt();
 
-        System.out.println(numberPlus(one, two));
         System.out.println(compareNumbers(one, two));
     }
 
@@ -24,13 +23,13 @@ public class ClassOne {
     //сравнивание чисел
     private static int compareNumbers(int number_1, int number_2) throws Exception {
         if(number_1 < number_2){
-            return number_2;
+            return number_2 - number_1;
         }
         else if (number_1 > number_2){
-            return number_1;
+            return number_1 - number_2;
         }
         else {
-            throw new Exception("введенные числа равны");
+            return 0;
         }
     }
 
