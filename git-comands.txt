@@ -1,0 +1,105 @@
+$ git help <команда>
+$ git <команда> --help
+$ man git-<команда>
+
+git config --global //user.email i.laukhin@hybrid.ai //user.name "Ilya"
+добавить имя и mail
+
+git config
+открыть руководство
+
+git config --list --show-origin 
+осмотреть все установленные настройки и узнать где именно они заданы
+
+git init 
+создать репозиторий из папки в которой нахожусь
+
+git clone {ссылка для клонирования}
+клонировать репозиторий
+
+git add
+добавить в индекс изменения
+
+git status (-s, --short)
+проверить какие файлы отслеживаются git 
+
+git log (-p, --patch // показывают изменения в коммитах) -1 //лимит по записям
+--stat (ограниченая инфа по изменениям)
+посмотреть историю изменений
+git log --pretty=format:"%H, %an, %ae"
+git log --since=2.weeks
+git log -1 HEAD (возвратит последний коммит)
+
+git commit -m 'my commit'
+сделать коммит
+
+git commit -m 'Delete ReadMe file' --amend
+отредактировать последний коммит
+
+git reset HEAD ReadMe.txt
+Отмена индексации файла
+
+git remote add origin https://github.com/Laukhin2018/IO.git
+добавить в удлаленный репозиторий по url
+
+git push -u origin master
+отправить на удаленный репозиторий в origin в ветку master
+
+git fetch origin
+извлечь из удаленного репозитория
+
+git remote
+
+git tag (параметры -l и --list опциональны)
+git tag -l 'v1.8.5*'
+Просмотреть список имеющихся тегов
+
+git tag -a v0.1 -m 'my version 0.1'
+создание аннотированной метки (tag)
+
+git tag {tag_name}
+создать легковесную метку
+
+git show {tag_name}
+посмотреть данный тега
+
+git tag v0.02 {хеш коммита}
+отправить в удале
+
+git push origin [имя метки] (отправить КОНКРЕТНЫЙ теги в удаленный репозиторий)
+git push origin --tags (отправить ВСЕ теги в удаленный репозиторий)
+
+git fetch --tags (получить метки с удаленного репозитария)
+
+git tag -d {tag_name} 
+удаление тега из локального репозитория
+
+git push origin :refs/tags/{tag_name}
+удаление тега из удаленного репозитория (способ 1) 
+
+git push origin --delete {tag_name}
+удаление тега из удаленного репозитория (способ 2)
+
+git config --global alias.unstage 'reset HEAD --'
+создатть псевданим для команды
+
+git checkout -- {файл}
+отмена не зафиксированных измененний (не должны быть в add!!!)
+
+git checkout {имя_ветки} или {имя_коммита/хеш/контрольная_сумма}
+перейти в ветку или коммит(если перходишь в коммит вызает «detached HEAD»)
+
+git checkout -b имя-новой-ветки имя_коммита(или метки)
+созадание новой ветки относительно коммита
+
+git branch
+посмотреть список веток
+
+git branch {branch_name}
+создание новой ветки относительное 
+
+git log --oneline --decorate
+покажет куда указывают указатели веток
+
+
+
