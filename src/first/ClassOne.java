@@ -2,6 +2,7 @@ package first;
 
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class ClassOne {
@@ -9,12 +10,24 @@ public class ClassOne {
     public static void main(String[] args) throws Exception{
 
         Scanner in = new Scanner(System.in);
-        int one = in.nextInt();
-        int two = in.nextInt();
+        int one;
+        int two;
 
-        System.out.println(compareNumbers(one, two));
+        try {
+            one = in.nextInt();
+            two = in.nextInt();
+        }
+        catch (InputMismatchException e){
+            throw new InputMismatchException("Ввели не целое число!!!");
+        }
+        finally {
+            in.close();
+        }
 
+        System.out.println("Сложение " + numberPlus(one, two));
+        System.out.println("Сравнение " + compareNumbers(one, two));
         endProg();
+
     }
 
     //сложение функций
