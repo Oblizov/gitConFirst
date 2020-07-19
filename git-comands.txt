@@ -30,6 +30,15 @@ git log --pretty=format:"%H, %an, %ae"
 git log --since=2.weeks
 git log -1 HEAD (возвратит последний коммит)
 
+git log --oneline --decorate
+покажет куда указывают указатели веток
+
+git log {branch_name}
+выведет историю изменений у выбранной ветки 
+
+git log --all
+выведет историю изменений по всем веткам 
+
 git commit -m 'my commit'
 сделать коммит
 
@@ -98,8 +107,7 @@ git branch
 git branch {branch_name}
 создание новой ветки относительное 
 
-git log --oneline --decorate
-покажет куда указывают указатели веток
+
 
 
 
