@@ -24,8 +24,9 @@ public class ClassOne {
             in.close();
         }
 
-        System.out.println(numberPlus(one, two));
+        System.out.println("Сложение " + numberPlus(one, two));
 
+        System.out.println("Сравнение " + compareNumbers(one, two));
     }
 
     //сложение функций
