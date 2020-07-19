@@ -13,6 +13,8 @@ public class ClassOne {
         int two = in.nextInt();
 
         System.out.println(compareNumbers(one, two));
+
+        endProg();
     }
 
     //сложение функций
@@ -31,6 +33,10 @@ public class ClassOne {
         else {
             return 0;
         }
+    }
+
+    private static void endProg(){
+        System.out.println("END!");
     }
 
 }
