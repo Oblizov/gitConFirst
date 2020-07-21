@@ -48,6 +48,7 @@ public class ClassOne {
         }
     }
 
+    // оповещает о окончании программы
     private static void endProg(){
         System.out.println("END!");
     }
